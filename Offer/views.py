@@ -33,6 +33,7 @@ def of(request):
 Estilo                  :       {st}
 Detalles del producto   :       {request.POST['name']}
 Correo electrónico      :       {request.POST['details']}
+Teléfono                :       {request.POST['tel']}
 Dirección               :       {request.POST['address']}'''
         send_mail(
             sub,#subject
