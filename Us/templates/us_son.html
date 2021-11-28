@@ -1,0 +1,34 @@
+{% extends 'us_dad.html' %}
+{% load static %}
+
+{% block title %}LeoArts | Acerca de{% endblock %}
+
+{% block content %}
+
+<div class="cont" style="height:1580px">
+    <h6 class='sub_title'>Creative</h6>
+    <img src="{% static 'img/creative.jpg' %}" alt="" class = 'brand'>
+
+    <p class='us_text' style='text-align: right;'>Creative nace como una iniciativa creada para incentivar a jovenes a aprender oficios, iniciando la visuteria y continuando con otras ocupaciones en el futuro. <br> El proyecto se compone de dos ramas, el area de ventes y el area de enseñanza.</p>
+
+    <div style='clear:both;'></div>
+
+    <h6 class='sub_title'>Ventas</h6>
+
+    <p class='us_text' style='text-align: left;'>El area financiera esta controlada por nuestra sub-división llamada LeoLeoArt la quien se encarga también de la gestión de este sitio web y la creación de los productos ofertados en este lugar.</p> <a href="{{art}}" target='_blanck'><img src="{% static 'img/LeoLeoArt.png' %}" alt="" class="brand"></a>
+
+    <div style='clear:both;'></div>
+
+    <h6 class='sub_title'>Enseñanza</h6>
+
+    <a href="{{learn}}" target='_blanck'><img src="{% static 'img/L.png' %}" alt="" class="brand"></a>
+    <p class='us_text' style='text-align: right;'> <span style="font-weight: bold; color: #8ff;">(Proximamente)</span> Nos esforzamos en ayudar a las personas, por esta razon estaremos creando tutoriales en los que las personas puedan aprender como hacer cada uno de nuestros productos. Ya sea como pasatiempo o como una forma de ganar dinero, buscamos que estos conocimientos ayuden a la población general. Todo esto manejado por LeoLeoLearn, nuestra subdivisión educativa.</p> 
+
+    <div style='clear:both;'></div>
+
+    <h6 class='sub_title'>Funcionamiento Interno</h6>
+
+    <p class='us_text' style='text-align: left;'>LeoLeo se divide en varias sub-divisiones encargadas de cosas distintas, este sitio y proyecto es manejado por LeoLeoArt y LeoLeoLearn, LeoLeoArt se encarga de la parte artistica y finanzas y LeoLeoLearn se encargará de la enseñanza. <br>Aparte de estas dos divisiones tenemos también LeoLeoMusic la cual se encarga de producciones músicales entre otros proyectos auditivos y audiovisuales, también N-w00 la cual maneja y desarrolla el software requerido para varios proyectos.</p> <a href='mailto:leoleo.original.gmail.com?Subject=Interes' target='_blanck'><img src="{% static 'img/LeoLeo.png' %}" alt="" class="brand"></a>
+
+</div>
+{% endblock %}

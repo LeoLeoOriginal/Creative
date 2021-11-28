@@ -1,0 +1,52 @@
+{% extends 'of_dad.html' %}
+{% load static %}
+
+{% block title %}LeoArts | Oferta{% endblock %}
+
+{% block content %}
+
+    <div class="cont">
+        
+        {% if submitted == False %}
+        <h1>Pon una orden</h1>
+        <div style="clear:both;"></div>
+        <form action="" method="POST">
+            {% csrf_token %}
+                <div class="side">
+
+                <h6 class='or_wid_t' style=' margin: 0px 10px;'>Nombre completo</h6>
+                <input class='or_wid'   type="text" name="name" placeholder="Leonardo Gabriel Herrera Jaime">
+
+                <h6 class='or_wid_t' style=' margin: 0px 10px;'>Dirección de correo electrónico</h6>
+                <input class='or_wid' placeholder="correo.personal@email.com" type="email" name="email" id="">
+
+                <h6 class='or_wid_t' style=' margin: 0px 10px;'>Dirección física</h6>
+                <input class='or_wid' placeholder="País, ciudad, distrito" type="text" name="address" id="">
+
+                <h6 class='or_wid_t'  style=' margin: 0px 10px;'>Elija un estilo</h6>
+                <select class='or_wid'  name="style" class='style_menu'>
+                    <option class='style_menu' value="0">Estilo libre <img src="{% static 'img/ex_img.png' %}" alt=""> </option>
+                    <option class='style_menu' value="1">Estilo 1</option>
+                    <option class='style_menu' value="2">Estilo 2</option>
+                    <option class='style_menu' value="3">Estilo 3</option>
+                    <option class='style_menu' value="4">Estilo 4</option>
+                </select>
+                <input type="submit" value="Ordenar" class='or_wid' style='margin-top: 20px;'>
+                </div>
+
+                <div class="side">
+                    <h6 class='or_wid_t' style=' margin: 0px 10px;'>Añade detalles</h6>
+                    <textarea class='or_wid' name="details" cols="40" rows="20" placeholder="Personaliza tu diseño de manera descriptiva, tal y como se lo estuvieras contando a tu mejor amigo"></textarea>
+                </div>
+            
+                
+        </form>
+        {% else %}
+<h1 class='Done'>Orden hecha con exito</h1>
+<h4>No refresque la pagina o la orden se hará nuevamente, un encargado de servicio al cliente se comunicará con usted enseguida</h4>
+
+{% endif %}
+        
+
+    </div>
+{% endblock %}

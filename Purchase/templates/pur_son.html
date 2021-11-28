@@ -1,0 +1,36 @@
+{% extends 'lob_dad.html' %}
+
+{% block title %}LeoArts | Compra{% endblock %}
+
+{% block content %}
+<div class="cont">
+    {% if estilo == 1 %}
+    <h1 class='us_text' style='text-align: left;'>Etilo 1</h1>
+    <img src="{% static 'img/LeoLeoArt.png' %}" alt="" class="brand">
+    <div style="clear:both;"></div>
+    <p>Pulsera cubierta en un 20% aproximadamente de cuentas de madera o plastico y un nudo ajustable en la parte posterior del brasalete</p>
+
+    {% elif estilo == 2 %}
+    <h1 class='us_text' style='text-align: left;'>Etilo 1</h1>
+    <img src="{% static 'img/LeoLeoArt.png' %}" alt="" class="brand">
+    <div style="clear:both;"></div>
+    <p>Pulsera cobierta casi en su totalidad por cuentas de madera o plastico y hecha con una cuerda elastica para su facil ajustabilidad</p>
+
+    {% elif estilo == 3 %}
+    <h1 class='us_text' style='text-align: left;'>Etilo 1</h1>
+    <img src="{% static 'img/LeoLeoArt.png' %}" alt="" class="brand">
+    <div style="clear:both;"></div>
+    <p>Pulsera cubierta en un 10% a 40% de cuentas de madera o plastico y letras personalizables</p>
+
+    {% elif estilo == 4 %}
+    <h1 class='us_text' style='text-align: left;'>Etilo 1</h1>
+    <img src="{% static 'img/LeoLeoArt.png' %}" alt="" class="brand">
+    <div style="clear:both;"></div>
+    <p>Pulsera cubierta a porcentaje variable con un adorno de tamaño mediano</p>
+
+    {% endif %}
+    <h1>Producto no disponible</h1>
+
+    
+</div>
+{% endblock %}

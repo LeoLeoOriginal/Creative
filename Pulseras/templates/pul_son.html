@@ -1,0 +1,35 @@
+{% extends 'pul_dad.html' %}
+{% load static %}
+{% block title %}LeoArts | Visuteria{% endblock %}
+
+{% block content %}
+<div style='height:50px;'></div>
+<div class="cont" style="height: 800px;">
+        <a href="pur/1">
+            <button style='padding: 0px; float: left;'>
+                <img src="{% static 'img/s1l.png'%}" alt="" class='offer'>
+            </button>
+        </a>
+        <a href="pur/2">
+            <button style='padding: 0px; float: left;'>
+                <img src="{% static 'img/s2l.png'%}" alt="" class='offer'>
+            </a>
+
+    <div style='clear:both;'></div>
+        <a href="pur/3">
+            <button style='padding: 0px; float: left;'>
+                <img src="{% static 'img/s3l.png'%}" alt="" class='offer'>
+            </button>
+        </a>
+        <a href="pur/4">
+            <button style='padding: 0px; float: left;'>
+                <img src="{% static 'img/s4l.png'%}" alt="" class='offer'>
+            </button>
+        </a>
+
+        <a href="of/">
+            <button class="button" style = 'height: 40px;'><div class="icon" style='color: #004939;'>Colocar orden</div> </button>
+        </a>
+</div>
+<div style='height:50px;'></div>
+{% endblock %}

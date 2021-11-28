@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCPTYPE html>
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'css/general.css' %}">
+        <style>
+            button{
+                width: 80%; margin: 0px 9%; margin-top:60px;
+            }
+            .cont{
+                margin-top: 10px; height: 425px;
+            }
+            .space{
+                height: 40px;
+            }
+        </style>
+    </head>
+    <body style="background-image: url('{% static 'img/ex_img.png' %}');">
+        <header>
+        <img src="{% static 'img/L.png' %}" class='logo' alt="">
+        <img src="{% static 'img/LeoLeo.png' %}" class='logo' alt="">
+        <img src="{% static 'img/LeoLeoArt.png' %}" class='logo' alt="">
+        <h1 class='top_title'>Creative</h1>
+        </header>
+        {% block content %}{% endblock %}
+        <div class="barra">
+            <a href="{{leo}}" target='_blanck'><img src="{% static 'img/LeoLeo.png' %}" class='foot' alt=""></a>
+            <a href="{{learn}}" target='_blanck'><img src="{% static 'img/L.png' %}" class='foot' alt=""></a>
+            <a href="{{art}}" target='_blanck'><img src="{% static 'img/LeoLeoArt.png' %}" class='foot' alt=""></a>
+            <a href="{{music}}" target='_blanck'><img src="{% static 'img/LeoLeoMusic.png' %}" class='foot' alt=""></a>
+            <a href="{{nw}}" target='_blanck'><img src="{% static 'img/N_w00.jpg' %}" class='foot' alt=""></a>
+        </div>
+        
+        
+    </body>
+</html>
