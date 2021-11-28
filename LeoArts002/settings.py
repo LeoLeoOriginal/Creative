@@ -25,7 +25,7 @@ SECRET_KEY = '_it+=h&jloh)2vk67j5kuu)gfz*vr#$b^tn5m8rg_qmfc^rtd='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://leoleoartcreative.pythonanywhere.com']
 
 
 # Application definition
@@ -58,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'LeoArts002.urls'
+ROOT_URLCONF = ('LeoArts002.urls','http://leoleoartcreative.pythonanywhere.com')
 
 TEMPLATES = [
     {
