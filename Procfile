@@ -1,0 +1,1 @@
+web: gunicorn LeoArts002.wsgi

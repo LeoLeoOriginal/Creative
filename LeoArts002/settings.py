@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import django_heroku
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +28,7 @@ SECRET_KEY = '_it+=h&jloh)2vk67j5kuu)gfz*vr#$b^tn5m8rg_qmfc^rtd='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['http://leoleoartcreative.pythonanywhere.com']
+ALLOWED_HOSTS = ['http://leoleoartcreative.pythonanywhere.com',]
 
 
 # Application definition
@@ -49,6 +52,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    #Mine
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    #Django
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -126,9 +132,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_ROOT = '/static/'
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'statics'),)
+STATICFILES_STARAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #Email Settings
 
@@ -137,3 +144,5 @@ EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'leoleo.art.creative@gmail.com'
 EMAIL_HOST_PASSWORD = 'Miguel Angel'
 EMAIL_USE_TLS = True
+
+django_heroku.settings(locals())
