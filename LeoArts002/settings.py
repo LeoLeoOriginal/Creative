@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '_it+=h&jloh)2vk67j5kuu)gfz*vr#$b^tn5m8rg_qmfc^rtd='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['http://leoleoartcreative.pythonanywhere.com',]
 
@@ -64,7 +64,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = ('LeoArts002.urls','http://leoleoartcreative.pythonanywhere.com')
+ROOT_URLCONF = ('LeoArts002.urls')
 
 TEMPLATES = [
     {
